@@ -1,0 +1,36 @@
+#other
+.pulse-cookie
+*.ogg
+*.mp4
+*.mp3
+*.zip
+*.gz
+*.png
+*.jpg
+*.swp
+#python
+*.py[cod]
+*.egg
+*.egg-info
+.coverage
+.tox
+# C
+# Object files
+*.o
+# Libraries
+*.lib
+*.a
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+# Executables
+*.exe
+*.out
+*.app
+# django
+*.log
+*.pot
+*.pyc
+local_settings.py
