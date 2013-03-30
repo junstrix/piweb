@@ -1,11 +1,11 @@
-# from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url
 from django.conf.urls import *
 from pi_dev.views import Pi_Index
 from pi_dev.views import hello
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
