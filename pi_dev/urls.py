@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from django.conf.urls import *
 from pi_dev.views import Pi_Index
 from pi_dev.views import hello
 
