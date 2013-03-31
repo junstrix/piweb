@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>~/embedded/gcd.c.html</title>
+<meta name="Generator" content="Vim/7.2">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body bgcolor="#002b36" text="#839496"><font face="monospace">
+<span style="background-color: #073642"><font color="#586e75">&nbsp;1 </font></span><font color="#cb4b16">#include </font><font color="#2aa198">&lt;stdio.h&gt;</font><br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;2 </font></span><font color="#cb4b16">#include </font><font color="#2aa198">&lt;stdlib.h&gt;</font><br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;3 </font></span><font color="#b58900">int</font>&nbsp;gcd(<font color="#b58900">int</font>&nbsp;a, <font color="#b58900">int</font>&nbsp;b);<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;4 </font></span><font color="#b58900">int</font>&nbsp;main(<font color="#b58900">int</font>&nbsp;argc, <font color="#b58900">const</font>&nbsp;<font color="#b58900">char</font>&nbsp;*argv[])<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;5 </font></span>{<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;6 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b58900">int</font>&nbsp;a,b;<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;7 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<font color="#2aa198">&quot;Input to number e.g: 8 16</font><font color="#dc322f">\n</font><font color="#2aa198">&quot;</font>);<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;8 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf(<font color="#2aa198">&quot;</font><font color="#dc322f">%d</font><font color="#2aa198">&nbsp;</font><font color="#dc322f">%d</font><font color="#2aa198">&quot;</font>,&amp;a,&amp;b);<br>
+<span style="background-color: #073642"><font color="#586e75">&nbsp;9 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<font color="#2aa198">&quot;最大公约数为: </font><font color="#dc322f">%d</font><font color="#dc322f">\n</font><font color="#2aa198">&quot;</font>,gcd(a,b));<br>
+<span style="background-color: #073642"><font color="#586e75">10 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#586e75"><i>// 最小公倍数公式: |a x b| / gcd</i></font><br>
+<span style="background-color: #073642"><font color="#586e75">11 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(<font color="#2aa198">&quot;最小公倍数为: </font><font color="#dc322f">%d</font><font color="#dc322f">\n</font><font color="#2aa198">&quot;</font>,(abs(a)*abs(b))/gcd(a,b));<br>
+<span style="background-color: #073642"><font color="#586e75">12 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#719e07">return</font>&nbsp;<font color="#2aa198">0</font>;<br>
+<span style="background-color: #073642"><font color="#586e75">13 </font></span>}<br>
+<span style="background-color: #073642"><font color="#586e75">14 </font></span><font color="#586e75"><i>/*</i></font><font color="#586e75"><i>辗转相除法求最大公约数</i></font><font color="#586e75"><i>*/</i></font><br>
+<span style="background-color: #073642"><font color="#586e75">15 </font></span><font color="#b58900">int</font>&nbsp;gcd(<font color="#b58900">int</font>&nbsp;a, <font color="#b58900">int</font>&nbsp;b)<br>
+<span style="background-color: #073642"><font color="#586e75">16 </font></span>{<br>
+<span style="background-color: #073642"><font color="#586e75">17 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#b58900">int</font>&nbsp;c;<br>
+<span style="background-color: #073642"><font color="#586e75">18 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#719e07">while</font>&nbsp;(a != <font color="#2aa198">0</font>) {<br>
+<span style="background-color: #073642"><font color="#586e75">19 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = a;<br>
+<span style="background-color: #073642"><font color="#586e75">20 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = b % a;<br>
+<span style="background-color: #073642"><font color="#586e75">21 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = c;<br>
+<span style="background-color: #073642"><font color="#586e75">22 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<span style="background-color: #073642"><font color="#586e75">23 </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#719e07">return</font>&nbsp;b;<br>
+<span style="background-color: #073642"><font color="#586e75">24 </font></span>}<br>
+</font></body>
+</html>
