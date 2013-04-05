@@ -1,10 +1,4 @@
 from django.conf.urls import patterns, include, url
-from control import urls as conurls
-from pi import urls as piurls
-
-# Uncomment the next two lines to enable the admin:
-from django.contrib import admin
-admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -15,9 +9,12 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^control/', include(conurls)),
-    url(r'^pi/', include(piurls)),
-    (r'^$','pi.views.index'),
+    (r'^$','control.views.index'),
+    (r'^tform/','control.views.tform'),
+    (r'^login/','control.views.login'),
+    (r'^logout/','control.views.logout'),
+    (r'^led/','control.views.led'),
+    (r'^search_form/','control.views.search_form'),
+    (r'^search/','control.views.search'),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve'),
 )
