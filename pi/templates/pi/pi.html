@@ -5,6 +5,7 @@ Server on pi
 {% endblock %}
 
 {% block content %}
+<a href="https://github.com/junstrix/piweb"><img height="120" style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
     <div id="left" class="glo_body">
 	<div id="pi_logo">
 		<p style="color: #BE1244;"><img src="http://www.sitepoint.com/wp-content/uploads/1/files/2012/02/647-raspberry-pi-50x50.png" data-pinit="registered">{{ os_uptime }}</p>
@@ -37,11 +38,11 @@ Server on pi
 			<li>实时显示相关信息(右图)</li>
 			<li>pi与arduino串口通信,实现数据采集、处理</li>
 			<li><a href="/static/program.html">c code</a></li>
+			<li>登录验证远控GPIO <a href="/control/login">login</a></li>
 		</ul>
 		<ul style="color: orange;">
 			正在进行
 			<li>与微信公众平台，实现交互获取相关数据</li>
-			<li>web方式远控GPIO</li>
 			<li>离线下载应用</li>
 		</ul>
 	</div>

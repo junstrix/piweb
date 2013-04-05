@@ -1,0 +1,16 @@
+{% extends "con/base.html" %}
+{% block title %}
+ {{ led_center }}
+{% endblock %}
+{% block content %}
+    {% if form.errors %}
+        <p class="error">Sorry, that's not a valid username or password</p>
+    {% endif %}
+    <form action="/control/login_view/" method="POST" accept-charset="utf-8">{% csrf_token %}
+        <label for="username">用户名:</label>
+        <input type="text" name="username" id="username" value="" />
+        <label for="password">密码:</label>
+        <input type="password" name="password" id="password" value="" />
+        <input type="submit" name="" id="" value="登录" />
+    </form>
+{% endblock %}

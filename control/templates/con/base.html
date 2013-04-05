@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>{% block title  %}
+    
+    {% endblock  %}</title>
+
+</head>
+<body>
+    <div class="g_header" id="header">
+        <p align="center">Welcome to RasPi Control center</p>
+        <hr />
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    <hr />    
+     <div class="g_footer" id="footer">
+         <p align="center">{{ current_time }}</p>
+     </div>
+    {% endblock %}
+</body>
+</html>
