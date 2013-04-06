@@ -52,8 +52,19 @@ def login(request):
 
 def control(request):
     """get a post control gpio"""
-    if not request.user.is_authenticated():
-        return HttpResponse("你无权访问...")
     led_center="raspberry pi control"
     current_time = datetime.today()
-    return render_to_response('con/control.html',{'led_center':led_center,'current_time':current_time})
+    light_bol = "/static/eg_bulboff.gif"
+    light_status = "on"
+    if not request.user.is_authenticated():
+        return HttpResponse("你无权访问...")
+    if request.POST.get('l_status','') == 'on':
+        light_bol = "/static/eg_bulbon.gif"
+        light_status = "off"
+    return render_to_response('con/control.html',{'led_center':led_center,'current_time':current_time,'light_bol':light_bol,'light_status':light_status})
+def test(request):
+    """test"""
+    if request.POST.get('l_status','') == 'on':
+        return HttpResponse("success!")
+    else:
+        return HttpResponse("failed!")
